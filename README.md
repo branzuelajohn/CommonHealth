@@ -9,8 +9,8 @@ The 5 features that the UHC application has are the following:
 
 User Login is done using Firebase Authentication, where users are required to input a Username, Email and Password upon registration. During registration, a unique username, email and password is required and a scan is done to check if the username already exists.
 
-- *Queue System*
-:
+- *Queue System*:
+
 Allows users to request for a queue number and see the current waiting time/number of people currently in queue. 
 Notifies users when their turn is near
 
