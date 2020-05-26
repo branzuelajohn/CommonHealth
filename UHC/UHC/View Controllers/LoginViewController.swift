@@ -24,7 +24,12 @@ class LoginViewController: UIViewController {
     }
     
     func setUpElements() {
+        
         errorLabel.alpha = 0
+        
+        Utilities.styleTextField(usernameTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleHollowButton(loginButton)
     }
 
     /*

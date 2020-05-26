@@ -13,7 +13,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signUpBotton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
     
     
@@ -25,7 +25,14 @@ class SignUpViewController: UIViewController {
     }
     
     func setUpElements() {
+        
         errorLabel.alpha = 0
+        
+        Utilities.styleTextField(usernameTextField)
+        Utilities.styleTextField(emailTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(signUpButton)
+        
     }
     /*
     // MARK: - Navigation
