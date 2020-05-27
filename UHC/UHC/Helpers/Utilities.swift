@@ -36,4 +36,11 @@ class Utilities {
         button.backgroundColor = UIColor.init(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
     }
     
+    static func isPasswordValid(_ password : String) -> Bool {
+           
+           let passwordTest = NSPredicate(format:
+           "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+           return passwordTest.evaluate(with: password)
+       }
+    
 }

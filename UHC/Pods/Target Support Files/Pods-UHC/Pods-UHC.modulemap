@@ -1,0 +1,6 @@
+framework module Pods_UHC {
+  umbrella header "Pods-UHC-umbrella.h"
+
+  export *
+  module * { export * }
+}
