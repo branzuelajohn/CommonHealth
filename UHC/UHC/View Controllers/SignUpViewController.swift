@@ -67,16 +67,16 @@ class SignUpViewController: UIViewController {
             showError(error!)
         } else {
         
-        // Create cleaned versions of the data
+            // Create cleaned versions of the data
             let username = usernameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-        // Create the User
+            // Create the User
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 
                 
-                //check for errors
+                //Check for errors
                 if err != nil {
                     // there was an error creating the user
                     self.showError("Error creating user")
@@ -92,8 +92,9 @@ class SignUpViewController: UIViewController {
                             self.showError("Error saving user data")
                         }
                     }
-            }
-        // Transition to the home screen
+                }
+                
+                // Transition to the home screen
                 self.transitionToHome()
             }
         }

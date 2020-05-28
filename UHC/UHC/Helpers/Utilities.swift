@@ -22,7 +22,7 @@ class Utilities {
     
     static func styleFilledButton(_ button:UIButton) {
         
-        button.backgroundColor = UIColor.init(red: 229/255, green: 114/255, blue: 0/255, alpha: 1)
+        button.backgroundColor = UIColor.init(red: 217/255, green: 115/255, blue: 0/255, alpha: 1)
         button.layer.cornerRadius = 25.0
         button.tintColor = UIColor.white
     }
