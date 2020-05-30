@@ -14,24 +14,28 @@ import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
 
+    @IBOutlet weak var titleTextLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var signInButton: UIButton!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        setUpElements()
+        setUpUI()
     }
     
-    func setUpElements() {
+    func setUpUI() {
         
         errorLabel.alpha = 0
-        
+        setupTitleLabel()
+        setupSignInButton()
         Utilities.styleTextField(usernameTextField)
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
