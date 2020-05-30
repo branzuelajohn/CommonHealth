@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Z1p-1o-KIm">
-                                <rect key="frame" x="40" y="693" width="334" height="120"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Z1p-1o-KIm">
+                                <rect key="frame" x="40" y="648" width="334" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiS-Ag-cTJ">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -45,7 +45,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.20271064186619714" blue="0.47147337147887325" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.2196078431372549" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Z1p-1o-KIm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="KIz-Mc-hFe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z1p-1o-KIm" secondAttribute="trailing" constant="40" id="KPA-MC-ZDI"/>
@@ -130,7 +130,7 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.20271064189999999" blue="0.47147337150000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.2196078431372549" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4fv-nQ-Hxq" firstAttribute="trailing" secondItem="gwl-Ah-G3G" secondAttribute="trailing" constant="40" id="Chz-HY-AjF"/>
                             <constraint firstItem="gwl-Ah-G3G" firstAttribute="leading" secondItem="4fv-nQ-Hxq" secondAttribute="leading" constant="40" id="frR-0F-RYb"/>
@@ -298,6 +298,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="iwC-bc-wbR"/>
         <segue reference="5xH-AD-aH3"/>
     </inferredMetricsTieBreakers>
 </document>
