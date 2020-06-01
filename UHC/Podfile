@@ -10,6 +10,8 @@ pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
-
+pod 'ProgressHUD'
+pod 'JGProgressHUD'
+pod 'SVProgressHUD'
 
 end
