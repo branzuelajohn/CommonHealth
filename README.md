@@ -33,7 +33,7 @@ Users are able to get related information, steps to follow, and the link to the 
   <tr>
     <td> Main Menu </td>
     <td> Sign Up Page </td>
-    <td> **Login Page </td>
+    <td> Login Page </td>
     <td> Forgot Password Page </td>
   </tr> 
   <tr> 
