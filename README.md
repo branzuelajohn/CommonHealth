@@ -46,5 +46,16 @@ Users are able to get related information, steps to follow, and the link to the 
   </table>
 
 
+## Poster and Video
+<p>
+<img align = "left" src = "screenshots/Poster.jpg" width = "500" />
+</p>
+
+<br/>
+
+
+**Link to Video** : https://youtu.be/50yCR8v9Gsk
+                                                              
+
 
 
