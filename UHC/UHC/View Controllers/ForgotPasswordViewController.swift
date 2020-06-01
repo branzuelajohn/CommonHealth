@@ -51,12 +51,14 @@ class ForgotPasswordViewController: UIViewController {
             resetPassword(email: email, onSuccess: {
                 self.view.endEditing(true)
                 SVProgressHUD.showInfo(withStatus: "We have just sent you a password reset email. Please check your inbox and follow the instructions to reset your password")
+                SVProgressHUD.setContainerView(self.view)
                 SVProgressHUD.dismiss(withDelay: 4.0)
                 DispatchQueue.main.asyncAfter(deadline: .now() + 4.0) {
                    self.navigationController?.popViewController(animated: true)
                 }
             }) { (errorMessage) in
                 SVProgressHUD.showError(withStatus: errorMessage)
+                SVProgressHUD.setContainerView(self.view)
                 SVProgressHUD.dismiss(withDelay: 4.0)
             }
     }
