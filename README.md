@@ -5,16 +5,16 @@ Our team observed that as students, time is essential and limited, so making eff
 ## Features Explained
 The 5 features that the UHC application has are the following:
 
-- *User Login*:
+- *User Login* :
 
 User Login is done using Firebase Authentication, where users are required to input a Username, Email and Password upon registration. During registration, a unique username, email and password is required and a scan is done to check if the username already exists.
 
-- *Queue System*:
+- *Queue System* :
 
 Allows users to request for a queue number and see the current waiting time/number of people currently in queue. 
 Notifies users when their turn is near
 
-- *Calendar System*:
+- *Calendar System* :
 
 Users are able to view the date and time of follow-up appointments (if any) in the mobile application. Reminders and notifications will also be set to remind users about their upcoming appointment.
 
@@ -24,9 +24,27 @@ Users are able to view the date and time of follow-up appointments (if any) in t
 Users are able to submit queries and these enquiries will be attended to
 FAQ Section has information such as details about the clinic's operating hours and registration, and the services provided in the health centre.
 
-- *Medical Insurance Claim*
+- *Medical Insurance Claim* :
 
 Users are able to get related information, steps to follow, and the link to the claims website on the UHC mobile application.
+
+## App Screenshots
+<table>
+  <tr>
+    <td> Main Menu </td>
+    <td> Sign Up Page </td>
+    <td> **Login Page </td>
+    <td> Forgot Password Page </td>
+  </tr> 
+  <tr> 
+    <td> <img src= "screenshots/MainMenu.png" width = "150" title ="Main Menu" /> </td>
+    <td> <img src= "screenshots/SignUp.png" width = "150" title = "Sign Up Page"> </td>
+    <td> <img src= "screenshots/SignIn.png" width = "150 title = "Login Page""> </td>
+    <td> <img src= "screenshots/ForgotPassword.png" width = "150">
+      <img src= "screenshots/ForgotPasswordStatus.png" width = "150"> </td>
+  </tr>
+  </table>
+
 
 
 
