@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yln-MO-asI">
-                                <rect key="frame" x="20" y="250" width="374" height="312"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yln-MO-asI">
+                                <rect key="frame" x="20" y="249" width="374" height="312"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="200" image="blue bg" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-jN-yTl">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>

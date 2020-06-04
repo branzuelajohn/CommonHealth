@@ -44,29 +44,44 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mBj-x7-ape">
-                                <rect key="frame" x="40" y="208" width="334" height="360"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mBj-x7-ape">
+                                <rect key="frame" x="40" y="238" width="334" height="330"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Announcements" translatesAutoresizingMaskIntoConstraints="NO" id="PtK-ZT-NB2">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="120"/>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="un1-JN-avo">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="120" id="L24-hp-Ndj"/>
+                                            <constraint firstAttribute="height" constant="100" id="yap-zp-sqR"/>
                                         </constraints>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Events" translatesAutoresizingMaskIntoConstraints="NO" id="uti-hR-Y0F">
-                                        <rect key="frame" x="0.0" y="120" width="334" height="120"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FAQ" translatesAutoresizingMaskIntoConstraints="NO" id="gP5-WJ-Xrd">
-                                        <rect key="frame" x="0.0" y="240" width="334" height="120"/>
-                                    </imageView>
+                                        <state key="normal" title="Button" image="Announcements"/>
+                                        <connections>
+                                            <segue destination="9SO-ZH-b65" kind="show" id="e23-CE-0fI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtH-za-HVD">
+                                        <rect key="frame" x="0.0" y="115" width="334" height="100"/>
+                                        <state key="normal" title="Button" image="Events"/>
+                                        <connections>
+                                            <segue destination="eDG-et-CqV" kind="show" id="U0j-ej-0ra"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaQ-SC-sR0">
+                                        <rect key="frame" x="0.0" y="230" width="334" height="100"/>
+                                        <state key="normal" title="Button" image="FAQ"/>
+                                        <connections>
+                                            <segue destination="RCB-TQ-xlB" kind="show" id="4Jt-as-i8m"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="uti-hR-Y0F" firstAttribute="height" secondItem="PtK-ZT-NB2" secondAttribute="height" id="af6-gF-W9t"/>
-                                    <constraint firstItem="gP5-WJ-Xrd" firstAttribute="height" secondItem="PtK-ZT-NB2" secondAttribute="height" id="fzR-aG-3P6"/>
+                                    <constraint firstItem="oaQ-SC-sR0" firstAttribute="height" secondItem="un1-JN-avo" secondAttribute="height" id="ppi-dr-A8J"/>
+                                    <constraint firstItem="KtH-za-HVD" firstAttribute="height" secondItem="un1-JN-avo" secondAttribute="height" id="qmo-Ak-3en"/>
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UHC" translatesAutoresizingMaskIntoConstraints="NO" id="uxP-Wd-W9r">
-                                <rect key="frame" x="40" y="45" width="334" height="128"/>
+                                <rect key="frame" x="40" y="45" width="334" height="158"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -210,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9u2-yh-jfc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937.68115942029" y="490.84821428571428"/>
+            <point key="canvasLocation" x="2558" y="522"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="Qob-vU-P6k">
@@ -276,7 +291,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XuU-yy-Jia" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2779.7101449275365" y="902.67857142857133"/>
+            <point key="canvasLocation" x="3833" y="909"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="N0U-ks-5W3">
@@ -300,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fdl-ME-G6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2780" y="118"/>
+            <point key="canvasLocation" x="3878" y="118"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="40i-a2-d1t">
@@ -425,7 +440,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jMO-9N-GJt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937.68115942029" y="-232.36607142857142"/>
+            <point key="canvasLocation" x="2558" y="-358"/>
+        </scene>
+        <!--Announcements View Controller-->
+        <scene sceneID="odA-sI-5Lv">
+            <objects>
+                <viewController id="9SO-ZH-b65" customClass="AnnouncementsViewController" customModule="UHC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fvp-cP-tVa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PLk-nX-rMI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="prr-bU-RWd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="frR-gA-hZc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="303" y="-628"/>
+        </scene>
+        <!--Events View Controller-->
+        <scene sceneID="kqe-ZW-IOB">
+            <objects>
+                <viewController id="eDG-et-CqV" customClass="EventsViewController" customModule="UHC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hSM-v3-N9y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="nal-Eq-9nd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="p8L-yk-UhH"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MqL-gy-Hxv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="-628"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="efq-np-AyC">
+            <objects>
+                <viewController id="RCB-TQ-xlB" customClass="FAQViewController" customModule="UHC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y3x-iz-dhi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="MRM-Bk-vcx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vx1-4O-6x1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIL-2X-QIL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="-628"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QTc-zL-n5L">
@@ -446,8 +509,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iGS-cm-sUm"/>
-        <segue reference="SuY-gy-Nho"/>
+        <segue reference="sC1-as-agH"/>
+        <segue reference="iwC-bc-wbR"/>
         <segue reference="5xH-AD-aH3"/>
     </inferredMetricsTieBreakers>
     <resources>
