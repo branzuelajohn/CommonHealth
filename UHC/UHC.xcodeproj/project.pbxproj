@@ -10,6 +10,7 @@
 		0F30975D247EA1820038B496 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F30975C247EA1820038B496 /* GoogleService-Info.plist */; };
 		0F30975F247EA19D0038B496 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30975E247EA19D0038B496 /* Constants.swift */; };
 		0F309762247EA34D0038B496 /* nusuhc.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F309761247EA34D0038B496 /* nusuhc.png */; };
+		0F7D01FD2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D01FC2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift */; };
 		0FFBEA91247FD77E0037AF6A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBEA90247FD77E0037AF6A /* ForgotPasswordViewController.swift */; };
 		0FFBEA94248142710037AF6A /* SignUpViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBEA93248142710037AF6A /* SignUpViewController+UI.swift */; };
 		0FFBEA96248147950037AF6A /* LoginViewController + UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBEA95248147950037AF6A /* LoginViewController + UI.swift */; };
@@ -33,6 +34,7 @@
 		0F30975C247EA1820038B496 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F30975E247EA19D0038B496 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0F309761247EA34D0038B496 /* nusuhc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nusuhc.png; sourceTree = "<group>"; };
+		0F7D01FC2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotPassword + UI ViewController.swift"; sourceTree = "<group>"; };
 		0FFBEA90247FD77E0037AF6A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		0FFBEA93248142710037AF6A /* SignUpViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+UI.swift"; sourceTree = "<group>"; };
 		0FFBEA95248147950037AF6A /* LoginViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController + UI.swift"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				0FFBEA93248142710037AF6A /* SignUpViewController+UI.swift */,
 				0FFBEA95248147950037AF6A /* LoginViewController + UI.swift */,
+				0F7D01FC2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				C7386A0D24838D2B00160831 /* FAQViewController.swift in Sources */,
 				C7030993247BF68F0064417A /* HomeViewController.swift in Sources */,
 				0F30975F247EA19D0038B496 /* Constants.swift in Sources */,
+				0F7D01FD2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

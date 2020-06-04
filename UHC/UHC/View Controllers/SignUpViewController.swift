@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
+import ProgressHUD
 
 
 class SignUpViewController: UIViewController {
@@ -64,10 +65,13 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpTapped(_ sender: Any) {
     // Validate the fields
+        self.view.endEditing(true)
         let error = validateFields()
+        ProgressHUD.show()
         
         if error != nil {
             // There's something wrong with the fields show error message
+            ProgressHUD.showError(error!)
             showError(error!)
         } else {
         
@@ -83,9 +87,11 @@ class SignUpViewController: UIViewController {
                 //Check for errors
                 if err != nil {
                     // there was an error creating the user
+                    ProgressHUD.showError("Error creating user")
                     self.showError("Error creating user")
                 } else {
                     //User was created successfully, now store the first name and last name
+                    ProgressHUD.dismiss()
                     let db = Firestore.firestore()
                     
                     db.collection("users").addDocument(data: ["username" : username, "uid": result!.user.uid]) { (error) in
@@ -97,6 +103,7 @@ class SignUpViewController: UIViewController {
                         }
                     }
                 }
+            
                 
                 // Transition to the home screen
                 self.transitionToHome()

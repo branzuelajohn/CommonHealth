@@ -13,16 +13,20 @@ extension LoginViewController {
         let title = "Sign In"
         let attributedText = NSMutableAttributedString(string: title, attributes:
             [NSAttributedString.Key.font : UIFont.init(name: "Didot", size : 28)!,
-             NSAttributedString.Key.foregroundColor : UIColor.white])
+             NSAttributedString.Key.foregroundColor : UIColor.black])
         titleTextLabel.attributedText = attributedText
     }
     
     func setupSignUpButton() {
         let attributedText = NSMutableAttributedString(string: "Don't have an account? ", attributes: [NSAttributedString.Key.font
-            : UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor(white : 1, alpha : 0.65)])
-        let attributedSubText = NSMutableAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18), NSAttributedString.Key.foregroundColor : UIColor.white])
+            : UIFont.systemFont(ofSize: 16), NSAttributedString.Key.foregroundColor : UIColor(white : 0, alpha : 0.65)])
+        let attributedSubText = NSMutableAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 18), NSAttributedString.Key.foregroundColor : UIColor.black])
         attributedText.append(attributedSubText)
         signUpButton.setAttributedTitle(attributedText, for: UIControl.State.normal)
         
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }
