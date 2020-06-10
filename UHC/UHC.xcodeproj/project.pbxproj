@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0F30975D247EA1820038B496 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F30975C247EA1820038B496 /* GoogleService-Info.plist */; };
 		0F30975F247EA19D0038B496 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F30975E247EA19D0038B496 /* Constants.swift */; };
-		0F309762247EA34D0038B496 /* nusuhc.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F309761247EA34D0038B496 /* nusuhc.png */; };
 		0F7D01FD2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D01FC2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift */; };
 		0FFBEA91247FD77E0037AF6A /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBEA90247FD77E0037AF6A /* ForgotPasswordViewController.swift */; };
 		0FFBEA94248142710037AF6A /* SignUpViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FFBEA93248142710037AF6A /* SignUpViewController+UI.swift */; };
@@ -25,15 +24,11 @@
 		C7030991247BF66C0064417A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7030990247BF66C0064417A /* LoginViewController.swift */; };
 		C7030993247BF68F0064417A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7030992247BF68F0064417A /* HomeViewController.swift */; };
 		C7030997247D37A90064417A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7030996247D37A90064417A /* Utilities.swift */; };
-		C7386A0924838CEE00160831 /* AnnouncementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7386A0824838CEE00160831 /* AnnouncementsViewController.swift */; };
-		C7386A0B24838D1800160831 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7386A0A24838D1800160831 /* EventsViewController.swift */; };
-		C7386A0D24838D2B00160831 /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7386A0C24838D2B00160831 /* FAQViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0F30975C247EA1820038B496 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0F30975E247EA19D0038B496 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		0F309761247EA34D0038B496 /* nusuhc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nusuhc.png; sourceTree = "<group>"; };
 		0F7D01FC2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForgotPassword + UI ViewController.swift"; sourceTree = "<group>"; };
 		0FFBEA90247FD77E0037AF6A /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		0FFBEA93248142710037AF6A /* SignUpViewController+UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+UI.swift"; sourceTree = "<group>"; };
@@ -52,9 +47,6 @@
 		C7030990247BF66C0064417A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C7030992247BF68F0064417A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C7030996247D37A90064417A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		C7386A0824838CEE00160831 /* AnnouncementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementsViewController.swift; sourceTree = "<group>"; };
-		C7386A0A24838D1800160831 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
-		C7386A0C24838D2B00160831 /* FAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		F2231B36CC48B8D045A757F0 /* Pods-UHC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UHC.debug.xcconfig"; path = "Target Support Files/Pods-UHC/Pods-UHC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,14 +62,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F309760247EA3360038B496 /* Media */ = {
-			isa = PBXGroup;
-			children = (
-				0F309761247EA34D0038B496 /* nusuhc.png */,
-			);
-			path = Media;
-			sourceTree = "<group>";
-		};
 		0FFBEA92248142580037AF6A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,7 +110,6 @@
 		C7030979247BF1BC0064417A /* UHC */ = {
 			isa = PBXGroup;
 			children = (
-				0F309760247EA3360038B496 /* Media */,
 				C703097A247BF1BC0064417A /* AppDelegate.swift */,
 				C703097C247BF1BC0064417A /* SceneDelegate.swift */,
 				C7030995247D36850064417A /* Helpers */,
@@ -143,7 +126,6 @@
 		C7030994247BF6AA0064417A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C7386A0E24838D4F00160831 /* Main Menu */,
 				0FFBEA92248142580037AF6A /* Extensions */,
 				C703097E247BF1BC0064417A /* ViewController.swift */,
 				C703098E247BF64C0064417A /* SignUpViewController.swift */,
@@ -161,16 +143,6 @@
 				0F30975E247EA19D0038B496 /* Constants.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		C7386A0E24838D4F00160831 /* Main Menu */ = {
-			isa = PBXGroup;
-			children = (
-				C7386A0C24838D2B00160831 /* FAQViewController.swift */,
-				C7386A0A24838D1800160831 /* EventsViewController.swift */,
-				C7386A0824838CEE00160831 /* AnnouncementsViewController.swift */,
-			);
-			path = "Main Menu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +208,6 @@
 				C7030987247BF1C10064417A /* LaunchScreen.storyboard in Resources */,
 				0F30975D247EA1820038B496 /* GoogleService-Info.plist in Resources */,
 				C7030984247BF1C10064417A /* Assets.xcassets in Resources */,
-				0F309762247EA34D0038B496 /* nusuhc.png in Resources */,
 				C7030982247BF1BC0064417A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,11 +268,8 @@
 				0FFBEA94248142710037AF6A /* SignUpViewController+UI.swift in Sources */,
 				C703098F247BF64C0064417A /* SignUpViewController.swift in Sources */,
 				C7030991247BF66C0064417A /* LoginViewController.swift in Sources */,
-				C7386A0B24838D1800160831 /* EventsViewController.swift in Sources */,
-				C7386A0924838CEE00160831 /* AnnouncementsViewController.swift in Sources */,
 				0FFBEA96248147950037AF6A /* LoginViewController + UI.swift in Sources */,
 				C703097D247BF1BC0064417A /* SceneDelegate.swift in Sources */,
-				C7386A0D24838D2B00160831 /* FAQViewController.swift in Sources */,
 				C7030993247BF68F0064417A /* HomeViewController.swift in Sources */,
 				0F30975F247EA19D0038B496 /* Constants.swift in Sources */,
 				0F7D01FD2483D78300AA98D5 /* ForgotPassword + UI ViewController.swift in Sources */,

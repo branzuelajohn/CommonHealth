@@ -10,10 +10,19 @@ import UIKit
 
 class AnnouncementsViewController: UIViewController {
 
+    @IBOutlet weak var announcementsText: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadText(announcementsText)
+    }
+    
+    func loadText(_ textView: UITextView) {
+        textView.isEditable = false
+        textView.isUserInteractionEnabled = true
+        textView.isScrollEnabled = true
     }
     
 

@@ -30,13 +30,10 @@ class LoginViewController: UIViewController {
     func setUpElements() {
         
         errorLabel.alpha = 0
-        
+        Utilities.styleLabel(titleTextLabel)
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
-        Utilities.styleHollowButton(loginButton)
-        
-        setupTitleLabel()
-        setupSignUpButton()
+        Utilities.styleFilledButton(loginButton)
     }
     
     //Check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message.

@@ -35,8 +35,7 @@ class SignUpViewController: UIViewController {
     func setUpUI() {
         
         errorLabel.alpha = 0
-        setupTitleLabel()
-        setupSignInButton()
+        Utilities.styleLabel(titleTextLabel)
         Utilities.styleTextField(usernameTextField)
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)

@@ -15,31 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yln-MO-asI">
-                                <rect key="frame" x="20" y="249" width="374" height="312"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="200" image="blue bg" translatesAutoresizingMaskIntoConstraints="NO" id="xRE-jN-yTl">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="250"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="200" id="VV1-uH-nxo"/>
-                                            <constraint firstAttribute="height" constant="250" id="WS4-Gh-ZK6"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="University Health Centre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVB-cY-9a4">
-                                        <rect key="frame" x="0.0" y="250" width="374" height="62"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                        <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchscreen" translatesAutoresizingMaskIntoConstraints="NO" id="mn6-H7-6iK">
+                                <rect key="frame" x="20" y="388" width="374" height="120"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.01904698275" green="0.23859974740000001" blue="0.49377483129999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="yln-MO-asI" secondAttribute="trailing" constant="20" id="Loo-Mr-dKO"/>
-                            <constraint firstItem="yln-MO-asI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QyU-At-DzZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yln-MO-asI" secondAttribute="bottom" constant="300" id="et9-v8-lbX"/>
-                            <constraint firstItem="yln-MO-asI" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="250" id="fya-YU-OQF"/>
+                            <constraint firstItem="mn6-H7-6iK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="344" id="8SZ-1A-CSr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mn6-H7-6iK" secondAttribute="bottom" constant="354" id="MX6-eS-Fyf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mn6-H7-6iK" secondAttribute="trailing" constant="20" id="TdR-Tk-lAU"/>
+                            <constraint firstItem="mn6-H7-6iK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tJe-Ai-UtQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -50,6 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blue bg" width="1359.5" height="825.5"/>
+        <image name="launchscreen" width="1164.5" height="391.5"/>
     </resources>
 </document>
