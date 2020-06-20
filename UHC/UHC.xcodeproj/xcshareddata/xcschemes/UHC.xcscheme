@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C7030976247BF1BC0064417A"
-               BuildableName = "UHC.app"
+               BuildableName = "CommonHealth.app"
                BlueprintName = "UHC"
                ReferencedContainer = "container:UHC.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7030976247BF1BC0064417A"
-            BuildableName = "UHC.app"
+            BuildableName = "CommonHealth.app"
             BlueprintName = "UHC"
             ReferencedContainer = "container:UHC.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C7030976247BF1BC0064417A"
-            BuildableName = "UHC.app"
+            BuildableName = "CommonHealth.app"
             BlueprintName = "UHC"
             ReferencedContainer = "container:UHC.xcodeproj">
          </BuildableReference>

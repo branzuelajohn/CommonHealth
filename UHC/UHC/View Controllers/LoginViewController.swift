@@ -57,27 +57,23 @@ class LoginViewController: UIViewController {
 
   
     @IBAction func loginTapped(_ sender: Any) {
-        // Validate Text Fields
-        let error = validateFields()
         
-        if error != nil {
-            // There's something wrong with the fields show error message
-            showError(error!)
+        // Validate Text Fields
+        //let error = validateFields()
             
-            //Create cleaned versions of the text field
-            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        //Create cleaned versions of the text field
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
-            // Signing in the user
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        // Signing in the user
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 
-                if error != nil {
-                    // Could not sign in
-                    self.errorLabel.text = error!.localizedDescription
-                    self.errorLabel.alpha = 1
-                } else {
-                    self.transitionToHome()
-                }
+            if error != nil {
+                // Could not sign in
+                self.errorLabel.text = error!.localizedDescription
+                self.errorLabel.alpha = 1
+            } else {
+                self.transitionToHome()
             }
         }
     }
@@ -88,11 +84,9 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome() {
-    let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-    
-    view.window?.rootViewController = homeViewController
-    view.window?.makeKeyAndVisible()
+        let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
+        
+        self.view.window?.rootViewController = homeViewController
+        self.view.window?.makeKeyAndVisible()
     }
-    
-    
 }

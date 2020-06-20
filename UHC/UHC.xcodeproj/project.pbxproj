@@ -24,6 +24,10 @@
 		C7030991247BF66C0064417A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7030990247BF66C0064417A /* LoginViewController.swift */; };
 		C7030993247BF68F0064417A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7030992247BF68F0064417A /* HomeViewController.swift */; };
 		C7030997247D37A90064417A /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7030996247D37A90064417A /* Utilities.swift */; };
+		C745F3282499EEC30066F5D6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745F3272499EEC30066F5D6 /* SearchViewController.swift */; };
+		C745F32A249B3FA80066F5D6 /* ClinicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745F329249B3FA80066F5D6 /* ClinicViewController.swift */; };
+		C745F32C249B415E0066F5D6 /* Clinic.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745F32B249B415E0066F5D6 /* Clinic.swift */; };
+		C745F32E249B4E800066F5D6 /* ClinicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745F32D249B4E800066F5D6 /* ClinicTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +39,7 @@
 		0FFBEA95248147950037AF6A /* LoginViewController + UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController + UI.swift"; sourceTree = "<group>"; };
 		39F421AC7B52850735FEA4EB /* Pods_UHC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UHC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE7FFCBF452EC5570D3908B /* Pods-UHC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UHC.release.xcconfig"; path = "Target Support Files/Pods-UHC/Pods-UHC.release.xcconfig"; sourceTree = "<group>"; };
-		C7030977247BF1BC0064417A /* UHC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UHC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7030977247BF1BC0064417A /* CommonHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CommonHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C703097A247BF1BC0064417A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C703097C247BF1BC0064417A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C703097E247BF1BC0064417A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		C7030990247BF66C0064417A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C7030992247BF68F0064417A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C7030996247D37A90064417A /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C745F3272499EEC30066F5D6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		C745F329249B3FA80066F5D6 /* ClinicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicViewController.swift; sourceTree = "<group>"; };
+		C745F32B249B415E0066F5D6 /* Clinic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clinic.swift; sourceTree = "<group>"; };
+		C745F32D249B4E800066F5D6 /* ClinicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicTableViewCell.swift; sourceTree = "<group>"; };
 		F2231B36CC48B8D045A757F0 /* Pods-UHC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UHC.debug.xcconfig"; path = "Target Support Files/Pods-UHC/Pods-UHC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,7 +110,7 @@
 		C7030978247BF1BC0064417A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C7030977247BF1BC0064417A /* UHC.app */,
+				C7030977247BF1BC0064417A /* CommonHealth.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +123,7 @@
 				C7030995247D36850064417A /* Helpers */,
 				C7030994247BF6AA0064417A /* View Controllers */,
 				C7030980247BF1BC0064417A /* Main.storyboard */,
+				C745F32B249B415E0066F5D6 /* Clinic.swift */,
 				C7030983247BF1C10064417A /* Assets.xcassets */,
 				C7030985247BF1C10064417A /* LaunchScreen.storyboard */,
 				C7030988247BF1C10064417A /* Info.plist */,
@@ -132,6 +141,9 @@
 				C7030990247BF66C0064417A /* LoginViewController.swift */,
 				C7030992247BF68F0064417A /* HomeViewController.swift */,
 				0FFBEA90247FD77E0037AF6A /* ForgotPasswordViewController.swift */,
+				C745F3272499EEC30066F5D6 /* SearchViewController.swift */,
+				C745F329249B3FA80066F5D6 /* ClinicViewController.swift */,
+				C745F32D249B4E800066F5D6 /* ClinicTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -164,7 +176,7 @@
 			);
 			name = UHC;
 			productName = UHC;
-			productReference = C7030977247BF1BC0064417A /* UHC.app */;
+			productReference = C7030977247BF1BC0064417A /* CommonHealth.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,14 +273,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C745F32C249B415E0066F5D6 /* Clinic.swift in Sources */,
 				0FFBEA91247FD77E0037AF6A /* ForgotPasswordViewController.swift in Sources */,
 				C703097F247BF1BC0064417A /* ViewController.swift in Sources */,
 				C703097B247BF1BC0064417A /* AppDelegate.swift in Sources */,
 				C7030997247D37A90064417A /* Utilities.swift in Sources */,
+				C745F32A249B3FA80066F5D6 /* ClinicViewController.swift in Sources */,
 				0FFBEA94248142710037AF6A /* SignUpViewController+UI.swift in Sources */,
 				C703098F247BF64C0064417A /* SignUpViewController.swift in Sources */,
 				C7030991247BF66C0064417A /* LoginViewController.swift in Sources */,
+				C745F32E249B4E800066F5D6 /* ClinicTableViewCell.swift in Sources */,
 				0FFBEA96248147950037AF6A /* LoginViewController + UI.swift in Sources */,
+				C745F3282499EEC30066F5D6 /* SearchViewController.swift in Sources */,
 				C703097D247BF1BC0064417A /* SceneDelegate.swift in Sources */,
 				C7030993247BF68F0064417A /* HomeViewController.swift in Sources */,
 				0F30975F247EA19D0038B496 /* Constants.swift in Sources */,
@@ -424,7 +440,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.commonhealth.UHC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CommonHealth;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -442,7 +458,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.commonhealth.UHC;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CommonHealth;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

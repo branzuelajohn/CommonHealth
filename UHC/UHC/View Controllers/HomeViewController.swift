@@ -10,9 +10,19 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var topView: UIView!
+    @IBOutlet weak var searchButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        setUpUI()
+    }
+    
+    func setUpUI() {
+        topView.layer.cornerRadius = 25
+        Utilities.styleFilledButton(searchButton)
+        searchButton.titleLabel?.font = UIFont(name: "Futura-Bold", size: 15)
     }
     
     /*
