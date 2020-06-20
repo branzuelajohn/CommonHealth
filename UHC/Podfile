@@ -13,5 +13,6 @@ pod 'Firebase/Firestore'
 pod 'ProgressHUD'
 pod 'JGProgressHUD'
 pod 'SVProgressHUD'
+pod 'SideMenu'
 
 end

@@ -340,6 +340,7 @@ PODS:
   - nanopb/encode (1.30905.0)
   - ProgressHUD (2.70)
   - PromisesObjC (1.2.8)
+  - SideMenu (6.4.8)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
@@ -349,6 +350,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - JGProgressHUD
   - ProgressHUD
+  - SideMenu
   - SVProgressHUD
 
 SPEC REPOS:
@@ -376,6 +378,7 @@ SPEC REPOS:
     - nanopb
     - ProgressHUD
     - PromisesObjC
+    - SideMenu
     - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -402,8 +405,9 @@ SPEC CHECKSUMS:
   nanopb: c43f40fadfe79e8b8db116583945847910cbabc9
   ProgressHUD: e603e8b8622c47d8818b9fb38b3cfe9d3e7ca421
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 0efc4c98559c8a02ebd0713a2d5f4359d3b33d2f
+PODFILE CHECKSUM: 3b031eaa3f93aef4e8d61692cb23e9ebdcb60c0e
 
 COCOAPODS: 1.9.2
