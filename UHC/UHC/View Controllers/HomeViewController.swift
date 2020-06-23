@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import SideMenu
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var searchButton: UIButton!
     
+    var menu: SideMenuNavigationController?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUpUI()
+        
+        menu = SideMenuNavigationController(rootViewController: UIViewController())
+    }
+    
+    @IBAction func didTapMenu() {
+        present(menu!, animated: true)
     }
     
     func setUpUI() {
