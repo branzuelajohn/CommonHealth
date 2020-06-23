@@ -31,14 +31,11 @@ class ForgotPasswordViewController: UIViewController {
         setupEmailTextField()
     }
     
-   
-    
     func showError(_ message:String) {
            errorLabel.text = message
            errorLabel.alpha = 1
     }
    
-    
     @IBAction func ResetButtonTapped(_ sender: Any) {
         
         guard let email = emailTextField.text, email != "" else {
@@ -74,6 +71,4 @@ class ForgotPasswordViewController: UIViewController {
         }
         
     }
-    
-    
 }

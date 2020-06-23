@@ -320,6 +320,17 @@
                                     <constraint firstAttribute="height" constant="485" id="PLh-6f-uKN"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joW-cG-MbA">
+                                <rect key="frame" x="43" y="621" width="346" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Get Queue Number">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="QButtonTapped:" destination="DZ0-Fm-COW" eventType="touchUpInside" id="huy-lc-d4I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96862745100000003" green="0.51764705879999995" blue="0.51764705879999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -332,13 +343,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="VPX-wz-Uy0"/>
                     <connections>
+                        <outlet property="QButton" destination="joW-cG-MbA" id="05C-yw-0Lh"/>
                         <outlet property="nameLabel" destination="N6x-Da-UGj" id="a88-Lp-jpf"/>
                         <outlet property="photoImageView" destination="mfN-t8-6WY" id="eoU-h2-eXT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1A-Vl-Cow" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3568" y="-911"/>
+            <point key="canvasLocation" x="3566.666666666667" y="-911.38392857142856"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="Yhh-r6-GIq">

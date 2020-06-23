@@ -8,13 +8,17 @@
 
 import UIKit
 import os.log
+import Firebase
 
 class ClinicViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var QButton: UIButton!
     
     var clinic: Clinic?
+    var QNumber = 0
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,4 +40,10 @@ class ClinicViewController: UIViewController {
         clinic = Clinic(name: name, photo: photo, description: "")
     }
     
+    
+    @IBAction func QButtonTapped(_ sender: Any) {
+        let clinicName = clinic!.name
+        QNumber = (QNumber+1)%1000
+        db.collection("clinics").document(clinicName).collection("queue").addDocument(data: ["user": "Test", "Qnumber": QNumber])
+    }
 }
