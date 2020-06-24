@@ -52,6 +52,8 @@ class SignUpViewController: UIViewController {
         Utilities.styleTextField(mobileNumberTextField)
         Utilities.styleTextField(confirmPasswordTextField)
         Utilities.styleTextField(dobTextField)
+        passwordTextField.isSecureTextEntry = true
+        confirmPasswordTextField.isSecureTextEntry = true
         
     }
     
@@ -68,6 +70,12 @@ class SignUpViewController: UIViewController {
             return "Please fill in all fields"
         }
         
+        // Check whether mobile number is valid (has 8 numbers)
+        let mobileNum = mobileNumberTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if mobileNum.count != 8 {
+            return "Invalid mobile number"
+        }
+        
         // Check if the password is secure
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let confirmedpw = confirmPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -80,6 +88,17 @@ class SignUpViewController: UIViewController {
             // Passwords are not the same
             return "Please make sure your passwords are the same."
         }
+        
+        // Check whether emails are the same
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let confirmEmail = confirmEmailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if email != confirmEmail {
+            return "Emails are not the same"
+        }
+        
+        // Check whether NRIC is valid (TO DO!!!)
+        
+        
         return nil
     }
     
