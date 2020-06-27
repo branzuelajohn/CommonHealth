@@ -37,6 +37,9 @@ class LoginViewController: UIViewController {
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
+        
+        // Make password field secure
+        passwordTextField.isSecureTextEntry = true
     }
     
     //Check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message.
