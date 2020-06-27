@@ -20,6 +20,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var signUpButton: UIButton!
     
+    var user = User(name: "default", nric: "default")
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,24 +40,21 @@ class LoginViewController: UIViewController {
     }
     
     //Check the fields and validate that the data is correct. If everything is correct, this method returns nil. Otherwise, it returns the error message.
-       func validateFields() -> String? {
-           // Check that all fields are filled in
-           if  emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+    func validateFields() -> String? {
+        // Check that all fields are filled in
+        if  emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
                passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
                return "Please fill in all fields"
-           }
+        }
            
-           // Check if the password is secure
-           let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-           if Utilities.isPasswordValid(cleanedPassword) == false {
-               // Password isn't secure enough
-               return "Please make sure your password is at least 8 characters, contains a special character and a number"
-           }
-           
-           return nil
-       }
-       
-
+        // Check if the password is secure
+        let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            // Password isn't secure enough
+            return "Please make sure your password is at least 8 characters, contains a special character and a number"
+        }
+        return nil
+    }
   
     @IBAction func loginTapped(_ sender: Any) {
         
@@ -74,6 +74,16 @@ class LoginViewController: UIViewController {
                 self.errorLabel.alpha = 1
             } else {
                 self.transitionToHome()
+            }
+            self.db.collection("users").document(email).getDocument{ (document, error) in
+                if let document = document, document.exists {
+                    let username = document.get("Name") as! String
+                    let usernric = document.get("NRIC") as! String
+                    UserDefaults.standard.set(username, forKey: "username")
+                    UserDefaults.standard.set(usernric, forKey: "usernric")
+                } else {
+                    print("Document does not exist")
+                }
             }
         }
     }

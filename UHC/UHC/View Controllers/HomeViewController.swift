@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var searchButton: UIButton!
     
     var menu: SideMenuNavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

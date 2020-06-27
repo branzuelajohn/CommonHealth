@@ -83,7 +83,7 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func signUpTapped(_ sender: Any) {
-    // Validate the fields
+        // Validate the fields
         self.view.endEditing(true)
         let error = validateFields()
         ProgressHUD.show()
@@ -93,7 +93,7 @@ class SignUpViewController: UIViewController {
             ProgressHUD.showError(error!)
             showError(error!)
         } else {
-        
+            
             // Create cleaned versions of the data
             let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -104,30 +104,28 @@ class SignUpViewController: UIViewController {
             
             // Create the User
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-                
-                
                 //Check for errors
                 if err != nil {
                     // there was an error creating the user
                     ProgressHUD.showError("Error creating user")
                     self.showError("Error creating user")
                 } else {
+                    
                     //User was created successfully, now store the first name and last name
                     ProgressHUD.dismiss()
                     let db = Firestore.firestore()
-                    
-                    db.collection("users").addDocument(data: ["username" : name, "NRIC" : NRIC, "Mobile Number" : mobileNum, "Date Of Birth" : dob , "uid" : result!.user.uid]) { (error) in
-                        
-                        
+                    db.collection("users").document(email).setData(["Name" : name, "Email": email, "NRIC" : NRIC, "Mobile Number" : mobileNum, "Date Of Birth" : dob , "UID" : result!.user.uid]) { (error) in
                         if error != nil {
                             // Show error message
                             self.showError("Error saving user data")
                         }
                     }
                 }
-            
-                
                 // Transition to the home screen
+                let username = self.nameTextField.text
+                let usernric = self.NRICTextField.text
+                UserDefaults.standard.set(username, forKey: "username")
+                UserDefaults.standard.set(usernric, forKey: "usernric")
                 self.transitionToHome()
             }
         }
@@ -173,8 +171,5 @@ class SignUpViewController: UIViewController {
         dobTextField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
     }
-    
-    
-    
 
 }

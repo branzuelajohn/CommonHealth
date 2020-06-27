@@ -15,10 +15,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var clinicTableView: UITableView!
     @IBOutlet weak var topView: UIView!
     
-    let clinicArray = [Clinic(name:"University Health Centre", photo: UIImage(named: "UHC"), description:nil),
-                       Clinic(name:"Doctor W.K.Koo & Associates P.L.", photo:nil, description:nil)]
-    
-    var searchClinic = [Clinic?]()
+    let clinicArray = ["University Health Centre", "Doctor W.K.Koo & Associates P.L."]
+    var searchClinic = [String()]
     var searching = false
     
     override func viewDidLoad() {
@@ -37,25 +35,17 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ClinicTableViewCell") as? ClinicTableViewCell else {
-            fatalError("The dequeued cell is not an instance of ClinicTableViewCell.")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         if searching {
-            let clinic = searchClinic[indexPath.row]
-            cell.nameLabel.text = clinic?.name
-            cell.photoImageView.image = clinic?.photo
+            cell?.textLabel?.text = searchClinic[indexPath.row]
         } else {
-            let clinic = clinicArray[indexPath.row]
-            cell.nameLabel.text = clinic?.name
-            cell.photoImageView.image = clinic?.photo
-            
+            cell?.textLabel?.text = clinicArray[indexPath.row]
         }
-        return cell
+        return cell!
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Searching")
-        searchClinic = clinicArray.filter({$0!.name.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searchClinic = clinicArray.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
         searching = true
         clinicTableView.reloadData()
     }
@@ -81,6 +71,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         }
         
         let selectedClinic = clinicArray[indexPath.row]
-        clinicDetailViewController.clinic = selectedClinic
+        clinicDetailViewController.clinic = Clinic(name: selectedClinic, photo: UIImage(named: selectedClinic), description: "")
     }
 }
