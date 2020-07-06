@@ -21,6 +21,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         topView.layer.cornerRadius = CGFloat(25)
         topView.clipsToBounds = true
         topView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
