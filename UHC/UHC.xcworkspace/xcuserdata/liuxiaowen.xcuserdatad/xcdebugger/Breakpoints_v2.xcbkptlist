@@ -56,7 +56,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A5429686-1D11-4293-8362-4C6A2C04ACBB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "UHC/View Controllers/LoginViewController.swift"
@@ -64,6 +64,130 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
+            landmarkName = "loginTapped(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A88C85FC-12D5-43C0-88A3-89F34F52B2E1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UHC/View Controllers/TicketViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "TicketViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "A88C85FC-12D5-43C0-88A3-89F34F52B2E1 - 340a9e4a99c5e75f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommonHealth.TicketViewController.clinicLabel.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "CommonHealth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liuxiaowen/Desktop/NUS/CP2106/CommonHealth/UHC/UHC/View%20Controllers/TicketViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "A88C85FC-12D5-43C0-88A3-89F34F52B2E1 - 948150bc11db032b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommonHealth.TicketViewController.clinicLabel.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "CommonHealth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liuxiaowen/Desktop/NUS/CP2106/CommonHealth/UHC/UHC/View%20Controllers/TicketViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "A88C85FC-12D5-43C0-88A3-89F34F52B2E1 - 292a4d0ba9fb1c58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommonHealth.TicketViewController.clinicLabel.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "CommonHealth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liuxiaowen/Desktop/NUS/CP2106/CommonHealth/UHC/UHC/View%20Controllers/TicketViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "A88C85FC-12D5-43C0-88A3-89F34F52B2E1 - 1a92484947696955"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommonHealth.TicketViewController.clinicLabel.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CommonHealth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liuxiaowen/Desktop/NUS/CP2106/CommonHealth/UHC/UHC/View%20Controllers/TicketViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "A88C85FC-12D5-43C0-88A3-89F34F52B2E1 - f15dc4e815c53cb5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommonHealth.TicketViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CommonHealth.TicketViewController"
+                  moduleName = "CommonHealth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liuxiaowen/Desktop/NUS/CP2106/CommonHealth/UHC/UHC/View%20Controllers/TicketViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "577">
+               </Location>
+               <Location
+                  uuid = "A88C85FC-12D5-43C0-88A3-89F34F52B2E1 - 2573a0580249feed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CommonHealth.TicketViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CommonHealth.TicketViewController&gt;"
+                  moduleName = "CommonHealth"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liuxiaowen/Desktop/NUS/CP2106/CommonHealth/UHC/UHC/View%20Controllers/TicketViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "518">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54B59D4C-2AEC-46A7-A0EF-589871ED35F1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "UHC/View Controllers/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "loginTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>

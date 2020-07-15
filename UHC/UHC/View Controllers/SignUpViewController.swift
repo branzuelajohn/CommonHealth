@@ -133,7 +133,7 @@ class SignUpViewController: UIViewController {
                     //User was created successfully, now store the first name and last name
                     ProgressHUD.dismiss()
                     let db = Firestore.firestore()
-                    db.collection("users").document(email).setData(["Name" : name, "Email": email, "NRIC" : NRIC, "Mobile Number" : mobileNum, "Date Of Birth" : dob , "UID" : result!.user.uid]) { (error) in
+                    db.collection("users").document(email).setData(["Name" : name, "Email": email, "NRIC" : NRIC, "Mobile Number" : mobileNum, "Date Of Birth" : dob , "In Queue" : false, "UID" : result!.user.uid]) { (error) in
                         if error != nil {
                             // Show error message
                             self.showError("Error saving user data")
@@ -145,6 +145,7 @@ class SignUpViewController: UIViewController {
                 let usernric = self.NRICTextField.text
                 UserDefaults.standard.set(username, forKey: "username")
                 UserDefaults.standard.set(usernric, forKey: "usernric")
+                UserDefaults.standard.set(self.emailTextField.text, forKey: "useremail")
                 self.transitionToHome()
             }
         }

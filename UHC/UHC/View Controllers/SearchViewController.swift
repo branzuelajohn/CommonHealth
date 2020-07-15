@@ -8,6 +8,7 @@
 
 import UIKit
 import os.log
+import Firebase
 
 class SearchViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
@@ -15,16 +16,31 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var clinicTableView: UITableView!
     @IBOutlet weak var topView: UIView!
     
-    let clinicArray = ["University Health Centre", "Doctor W.K.Koo & Associates P.L."]
+    let db = Firestore.firestore()
+    var clinicArray = [String]()
     var searchClinic = [String()]
     var searching = false
     
     override func viewDidLoad() {
+        retrieveClinic()
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
         topView.layer.cornerRadius = CGFloat(25)
         topView.clipsToBounds = true
         topView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+    }
+    
+    func retrieveClinic() {
+        db.collection("clinics").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.clinicArray.append(document.documentID)
+                }
+                self.clinicTableView.reloadData()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

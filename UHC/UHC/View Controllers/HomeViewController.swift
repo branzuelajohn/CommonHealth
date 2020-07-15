@@ -8,11 +8,13 @@
 
 import UIKit
 import SideMenu
+import Firebase
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var viewQTicket: UIButton!
     
     var menu: SideMenuNavigationController?
     
@@ -38,6 +40,24 @@ class HomeViewController: UIViewController {
         topView.layer.cornerRadius = 25
         Utilities.styleFilledButton(searchButton)
         searchButton.titleLabel?.font = UIFont(name: "Futura-Bold", size: 15)
+        Utilities.styleFilledButton(self.viewQTicket)
+        self.viewQTicket.titleLabel?.font = UIFont(name: "Futura-Bold", size: 20)
+        
+        let db = Firestore.firestore()
+        let email = UserDefaults.standard.string(forKey: "useremail")!
+        db.collection("users").document(email).getDocument{ (document, error) in
+            if let document = document, document.exists {
+                let inQueue = document.get("In Queue") as! Bool
+                if (inQueue == false) {
+                    self.viewQTicket.isEnabled = false
+                    self.viewQTicket.alpha = 0
+                } else {
+                    self.viewQTicket.alpha = 1
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
     
     class MenuListController: UITableViewController {

@@ -84,6 +84,7 @@ class LoginViewController: UIViewController {
                     let usernric = document.get("NRIC") as! String
                     UserDefaults.standard.set(username, forKey: "username")
                     UserDefaults.standard.set(usernric, forKey: "usernric")
+                    UserDefaults.standard.set(self.emailTextField.text, forKey: "useremail")
                 } else {
                     print("Document does not exist")
                 }

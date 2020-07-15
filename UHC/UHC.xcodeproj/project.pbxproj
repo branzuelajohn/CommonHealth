@@ -30,6 +30,7 @@
 		C745F32E249B4E800066F5D6 /* ClinicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745F32D249B4E800066F5D6 /* ClinicTableViewCell.swift */; };
 		C745F33024A333400066F5D6 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745F32F24A333400066F5D6 /* TicketViewController.swift */; };
 		C745F33224A4CA9F0066F5D6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C745F33124A4CA9F0066F5D6 /* User.swift */; };
+		C777ACBC24BEFFC00039D0A0 /* ViewTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C777ACBB24BEFFC00039D0A0 /* ViewTicketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		C745F32D249B4E800066F5D6 /* ClinicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClinicTableViewCell.swift; sourceTree = "<group>"; };
 		C745F32F24A333400066F5D6 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
 		C745F33124A4CA9F0066F5D6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C777ACBB24BEFFC00039D0A0 /* ViewTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTicketViewController.swift; sourceTree = "<group>"; };
 		F2231B36CC48B8D045A757F0 /* Pods-UHC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UHC.debug.xcconfig"; path = "Target Support Files/Pods-UHC/Pods-UHC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				C745F3272499EEC30066F5D6 /* SearchViewController.swift */,
 				C745F329249B3FA80066F5D6 /* ClinicViewController.swift */,
 				C745F32F24A333400066F5D6 /* TicketViewController.swift */,
+				C777ACBB24BEFFC00039D0A0 /* ViewTicketViewController.swift */,
 				C745F32D249B4E800066F5D6 /* ClinicTableViewCell.swift */,
 			);
 			path = "View Controllers";
@@ -286,6 +289,7 @@
 				C7030997247D37A90064417A /* Utilities.swift in Sources */,
 				C745F32A249B3FA80066F5D6 /* ClinicViewController.swift in Sources */,
 				0FFBEA94248142710037AF6A /* SignUpViewController+UI.swift in Sources */,
+				C777ACBC24BEFFC00039D0A0 /* ViewTicketViewController.swift in Sources */,
 				C745F33024A333400066F5D6 /* TicketViewController.swift in Sources */,
 				C703098F247BF64C0064417A /* SignUpViewController.swift in Sources */,
 				C7030991247BF66C0064417A /* LoginViewController.swift in Sources */,

@@ -17,10 +17,12 @@ class ClinicViewController: UIViewController {
     @IBOutlet weak var QButton: UIButton!
     @IBOutlet weak var currentLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var warningLabel: UILabel!
     
     var clinic: Clinic?
     let db = Firestore.firestore()
     var QNumber = 0;
+    var inQueue = false;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,12 @@ class ClinicViewController: UIViewController {
             nameLabel.text = clinic.name
             photoImageView.image = clinic.photo
         }
+        Utilities.styleFilledButton(self.QButton)
+        update()
+    }
+    
+    // MARK: - Navigation
+    func update() {
         
         db.collection("clinics").document(clinic!.name).getDocument{ (document, error) in
             if let document = document, document.exists {
@@ -45,10 +53,25 @@ class ClinicViewController: UIViewController {
                 print("Document does not exist")
             }
         }
-        Utilities.styleFilledButton(self.QButton)
+        
+        let email = UserDefaults.standard.string(forKey: "useremail")!
+        db.collection("users").document(email).getDocument{ (document, error) in
+            if let document = document, document.exists {
+                self.inQueue = document.get("In Queue") as! Bool
+                if (self.inQueue == false) {
+                    self.warningLabel.alpha = 0;
+                } else {
+                    self.warningLabel.alpha = 1;
+                    let currClinic = document.get("Clinic") as! String
+                    let currNum = document.get("Qnum") as! Int
+                    self.db.collection("users").document(email).setData(["LastClinic": currClinic, "LastQNum": currNum], merge: true)
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
     }
     
-    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let name = nameLabel.text ?? ""
         let photo = photoImageView.image
@@ -63,11 +86,18 @@ class ClinicViewController: UIViewController {
     
     
     @IBAction func QButtonTapped(_ sender: Any) {
-        let clinicName = clinic!.name
-        let userName = UserDefaults.standard.string(forKey: "username")
-        let userNRIC = UserDefaults.standard.string(forKey: "usernric")
-        print(QNumber)
-        db.collection("clinics").document(clinicName).collection("queue").addDocument(data: ["Name": userName!,"NRIC": userNRIC!, "Qnumber": QNumber])
-        db.collection("clinics").document(clinicName).setData(["Next Qnumber": QNumber+1], merge: true)
+        let userEmail = UserDefaults.standard.string(forKey: "useremail")!
+        db.collection("users").document(userEmail).getDocument{ (document, error) in
+            if let document = document, document.exists {
+                if (self.warningLabel.alpha == 1) {
+                    let clinic = document.get("LastClinic") as! String
+                    let Qnum = document.get("LastQNum") as! Int
+                    self.db.collection("clinics").document(clinic).collection("queue").document(String(Qnum)).setData(["Cancelled": true], merge: true)
+                }
+            } else {
+                print("Document does not exist")
+            }
+        }
+        
     }
 }

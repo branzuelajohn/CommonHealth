@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct Constants {
     
@@ -15,4 +16,6 @@ struct Constants {
         static let homeViewController = "HomeVC"
 
     }
+    
+    
 }

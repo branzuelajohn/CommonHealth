@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Clinic {
     
@@ -26,5 +27,4 @@ class Clinic {
         self.photo = photo
         self.description = description
     }
-    
 }
