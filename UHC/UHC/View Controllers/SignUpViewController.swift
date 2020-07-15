@@ -130,7 +130,7 @@ class SignUpViewController: UIViewController {
                     self.showError("Error creating user")
                 } else {
                     
-                    //User was created successfully, now store the first name and last name
+                    //User was created successfully
                     ProgressHUD.dismiss()
                     let db = Firestore.firestore()
                     db.collection("users").document(email).setData(["Name" : name, "Email": email, "NRIC" : NRIC, "Mobile Number" : mobileNum, "Date Of Birth" : dob , "In Queue" : false, "UID" : result!.user.uid]) { (error) in

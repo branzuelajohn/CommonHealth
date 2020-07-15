@@ -296,52 +296,51 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vCm-zZ-NF6">
-                                <rect key="frame" x="25" y="55" width="364" height="600"/>
+                                <rect key="frame" x="25" y="55" width="364" height="675"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zUx-uJ-xrD" userLabel="MapView">
-                                        <rect key="frame" x="0.0" y="0.0" width="364" height="185"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="227.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mfN-t8-6WY">
-                                        <rect key="frame" x="0.0" y="215" width="364" height="100"/>
+                                        <rect key="frame" x="0.0" y="257.5" width="364" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="KJE-5a-ARO"/>
+                                            <constraint firstAttribute="height" constant="80" id="KJE-5a-ARO"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clinic Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6x-Da-UGj">
-                                        <rect key="frame" x="0.0" y="345" width="364" height="25"/>
+                                        <rect key="frame" x="0.0" y="367.5" width="364" height="15"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="25" id="SG0-II-n18"/>
+                                            <constraint firstAttribute="height" constant="15" id="SG0-II-n18"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Is-Uh-jDR">
-                                        <rect key="frame" x="0.0" y="400" width="364" height="200"/>
+                                        <rect key="frame" x="0.0" y="412.5" width="364" height="175"/>
                                         <color key="backgroundColor" red="1" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="8qY-ek-JiS"/>
+                                            <constraint firstAttribute="height" constant="175" id="8qY-ek-JiS"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dki-m2-s36">
+                                        <rect key="frame" x="0.0" y="617.5" width="364" height="57.5"/>
+                                        <string key="text">Kindly note that as you are currently in another queue, by clicking "Get Queue Number", you will forfeit your current queue ticket</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" red="0.79607843140000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="600" id="PLh-6f-uKN"/>
+                                    <constraint firstAttribute="height" constant="675" id="PLh-6f-uKN"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dki-m2-s36">
-                                <rect key="frame" x="30" y="606" width="355" height="92"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Kindly note that as you are currently in another queue, by clicking "Get Queue Number", you will forfeit your current queue ticket</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.79607843140000001" green="0.26274509800000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joW-cG-MbA">
-                                <rect key="frame" x="30" y="706" width="355" height="46"/>
+                                <rect key="frame" x="30" y="742" width="355" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.31764705879999999" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -382,11 +381,11 @@
             <objects>
                 <viewController id="K9V-ml-aQa" customClass="TicketViewController" customModule="CommonHealth" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nXt-xU-uO2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TP3-JR-yLF">
-                                <rect key="frame" x="48" y="128" width="318" height="388"/>
+                                <rect key="frame" x="48" y="84" width="318" height="378"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="APb-2q-2Pf">
                                         <rect key="frame" x="8" y="18" width="302" height="21"/>
@@ -456,7 +455,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Queue Ticket:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOQ-fl-VTF">
-                                <rect key="frame" x="48" y="84" width="318" height="24"/>
+                                <rect key="frame" x="48" y="40" width="318" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1041,7 +1040,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="sC1-as-agH"/>
-        <segue reference="iV5-o2-Qgr"/>
+        <segue reference="jnK-Ql-Vl4"/>
         <segue reference="iwC-bc-wbR"/>
         <segue reference="HV1-y0-FuW"/>
     </inferredMetricsTieBreakers>

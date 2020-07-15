@@ -10,6 +10,7 @@ import UIKit
 import os.log
 import Firebase
 import GoogleMaps
+import CoreLocation
 
 class ClinicViewController: UIViewController {
 
@@ -20,6 +21,7 @@ class ClinicViewController: UIViewController {
     @IBOutlet weak var currentLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var warningLabel: UILabel!
+    var locationManager: CLLocationManager?
     
     var clinic: Clinic?
     let db = Firestore.firestore()
@@ -107,6 +109,8 @@ class ClinicViewController: UIViewController {
     func setupMap() {
         GMSServices.provideAPIKey("AIzaSyD67SclbwC6a6cqvy3sE7E_cLBWK2hDgdU")
         
+        determineMyCurrentLocation()
+        
         db.collection("clinics").document(clinic!.name).getDocument{ (document, error) in
         if let document = document, document.exists {
             let geopoint = document.get("GoogleMapLocation") as! GeoPoint
@@ -135,5 +139,38 @@ class ClinicViewController: UIViewController {
             marker.map = gmap
             }
         }
+    }
+    
+    func determineMyCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager?.requestAlwaysAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager?.startUpdatingLocation()
+            //locationManager.startUpdatingHeading()
+        }
+    }
+    
+    
+}
+
+extension ViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0] as CLLocation
+        
+        // Call stopUpdatingLocation() to stop listening for location updates,
+        // other wise this function will be called every time when user location changes.
+        
+        // manager.stopUpdatingLocation()
+        
+        print("user latitude = \(userLocation.coordinate.latitude)")
+        print("user longitude = \(userLocation.coordinate.longitude)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
+    {
+        print("Error \(error)")
     }
 }
