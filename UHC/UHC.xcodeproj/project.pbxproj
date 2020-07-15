@@ -175,6 +175,7 @@
 				C7030974247BF1BC0064417A /* Frameworks */,
 				C7030975247BF1BC0064417A /* Resources */,
 				A8AFE0DAE1248141C1E93716 /* [CP] Embed Pods Frameworks */,
+				E8B2DF5AFEF0E436D6D7FE2B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,6 +271,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UHC/Pods-UHC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8B2DF5AFEF0E436D6D7FE2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UHC/Pods-UHC-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UHC/Pods-UHC-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UHC/Pods-UHC-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
