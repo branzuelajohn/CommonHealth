@@ -40,6 +40,8 @@ class ClinicViewController: UIViewController {
             photoImageView.image = clinic.photo
         }
         Utilities.styleFilledButton(self.QButton)
+        
+        descriptionTextView.layer.cornerRadius = 10
         update()
     }
     
