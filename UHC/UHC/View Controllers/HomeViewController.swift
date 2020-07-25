@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         SideMenuManager.default.addPanGestureToPresent(toView: self.view)
         
     }
-    
+   
     @IBAction func didTapMenu() {
         present(menu!, animated: true)
     }
@@ -105,7 +105,8 @@ class HomeViewController: UIViewController {
                 // do something
                 print("show settings")
             } else if indexPath.row == 2 {
-                self.transitionToHome()
+                print("Logout")
+                self.setuplogout()
             } else {
                 //do something
             }
@@ -113,10 +114,19 @@ class HomeViewController: UIViewController {
         }
         
         // TO IMPROVE
-        func transitionToHome() {
-              let navigationController = self.storyboard?.instantiateViewController(identifier: "NavigationController") as! UINavigationController
-               self.view.window?.rootViewController = navigationController
-               self.view.window?.makeKeyAndVisible()
+        func setuplogout() {
+            
+            //self.navigationController?.popToRootViewController(animated: true)
+            do {
+                try Auth.auth().signOut()
+                let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let homeView = storyboard.instantiateViewController(withIdentifier: "ViewController")
+                self.navigationController?.pushViewController(homeView, animated: true)
+                //self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+                
+            } catch let signOutErr {
+                print("Failed to sign out: ", signOutErr)
+            }
            }
     }
     
