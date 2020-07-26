@@ -20,6 +20,8 @@ class ProfilePageViewController: UIViewController {
     @IBOutlet weak var NRICTextField: UITextField!
     @IBOutlet weak var mobileNumberTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    
     var gender : Bool!
     let datePicker = UIDatePicker()
     let db = Firestore.firestore()
@@ -29,6 +31,8 @@ class ProfilePageViewController: UIViewController {
         super.viewDidLoad()
         datePickerStyler()
         preparePlaceHolders()
+        Utilities.styleFilledButton(saveButton)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -108,15 +112,39 @@ class ProfilePageViewController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: Any) {
         if gender == true {
             db.collection("users").document(email).setData(["Gender" : "Male"], merge: true)
-            
         } else if gender == false {
             db.collection("users").document(email).setData(["Gender" : "Female"], merge: true)
-            
-            
         } else {
             print("Gender not selected")
         }
         
+        let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let dob = dobTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let NRIC = NRICTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let name = nameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if email == "" {
+            
+        } else {
+            db.collection("users").document(email).setData(["Email" : email], merge: true)
+        }
+        
+        if dob == "" {
+            
+        } else {
+            db.collection("users").document(email).setData(["Date Of Birth" : dob], merge: true)
+        }
+        
+        if NRIC == "" {
+            
+        } else {
+            db.collection("users").document(email).setData(["NRIC" : NRIC], merge: true)
+        }
+        
+        if name == "" {
+            
+        } else {
+            db.collection("users").document(email).setData(["Name" : name], merge: true)
+        }
     }
     
 }
