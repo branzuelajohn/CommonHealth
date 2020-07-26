@@ -15,6 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var viewQTicket: UIButton!
+    @IBOutlet weak var clinicImage: UIImageView!
+    @IBOutlet weak var aptLabel: UILabel!
     
     var menu: SideMenuNavigationController?
     
@@ -47,6 +49,16 @@ class HomeViewController: UIViewController {
         let email = UserDefaults.standard.string(forKey: "useremail")!
         db.collection("users").document(email).getDocument{ (document, error) in
             if let document = document, document.exists {
+                let aptDate = document.get("Appointment Date") as? String
+                let aptLoc = document.get("Appointment Location") as? String
+                if (aptDate != nil && aptLoc != nil){
+                    self.aptLabel.text = "Location: " + aptLoc! + "\n" + "Date: " + aptDate!
+                    self.clinicImage.image = UIImage(named: aptLoc!)
+                } else if (aptDate == nil) {
+                    print("aptDate")
+                } else {
+                    print("aptLoc")
+                }
                 let inQueue = document.get("In Queue") as! Bool
                 if (inQueue == false) {
                     self.viewQTicket.isEnabled = false
