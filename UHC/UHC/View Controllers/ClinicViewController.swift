@@ -61,7 +61,7 @@ class ClinicViewController: UIViewController {
                 print("Document does not exist")
             }
         }
-        
+
         let email = UserDefaults.standard.string(forKey: "useremail")!
         db.collection("users").document(email).getDocument{ (document, error) in
             if let document = document, document.exists {

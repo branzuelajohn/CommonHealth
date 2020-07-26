@@ -61,7 +61,7 @@ class HomeViewController: UIViewController {
     }
     
     class MenuListController: UITableViewController {
-        var items = ["Profile", "Settings", "Logout"]
+        var items = ["Edit Profile","Logout"]
         
         let darkColor = UIColor(red: 33/255.0, green: 33/255.0, blue: 33/255.0, alpha: 1)
         
@@ -100,11 +100,10 @@ class HomeViewController: UIViewController {
             if indexPath.row == 0 {
                 // do something
                 print("Profile")
-                
-            } else if indexPath.row == 1{
-                // do something
-                print("show settings")
-            } else if indexPath.row == 2 {
+                let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let nextView = storyboard.instantiateViewController(withIdentifier: "ProfilePageViewController")
+                self.navigationController?.present(nextView, animated: true)
+            } else if indexPath.row == 1 {
                 print("Logout")
                 self.setuplogout()
             } else {
