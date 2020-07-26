@@ -55,7 +55,8 @@ class ClinicViewController: UIViewController {
                  self.currentLabel.text = "Number of people currently in queue: " + (String)(self.QNumber - current - 1)
                 let location = document.get("Location") as! String
                 let time = document.get("Operating Hours") as! String
-                self.descriptionTextView.text = "Location: \(location) \n\n" + "Operating Hours: \n\((time).replacingOccurrences(of: "\n", with: "\n"))"
+                let tel = document.get("Tel") as! String
+                self.descriptionTextView.text = "Location: \(location) \n\n" + "Operating Hours: \n\((time).replacingOccurrences(of: "\n", with: "\n")) \n\n" + "Tel: \(tel)"
             } else {
                 print("Document does not exist")
             }
