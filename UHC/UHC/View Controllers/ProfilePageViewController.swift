@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import SVProgressHUD
 
 class ProfilePageViewController: UIViewController {
 
@@ -145,6 +146,12 @@ class ProfilePageViewController: UIViewController {
         } else {
             db.collection("users").document(email).setData(["Name" : name], merge: true)
         }
+        SVProgressHUD.setContainerView(self.view)
+        SVProgressHUD.showInfo(withStatus: "Successfully saved")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            SVProgressHUD.dismiss()
+            self.dismiss(animated: true, completion: nil)    }
+        
     }
     
 }
